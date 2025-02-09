@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .slider {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+    <script>
+        let index = 0;
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(-${index * 100}%)`;
+            });
+            index = (index + 1) % slides.length;
+        }
+        setInterval(showSlides, 3000);
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <img src="logo.png" alt="Church Logo" class="h-10">
+        <button class="md:hidden" onclick="document.getElementById('menu').classList.toggle('hidden')">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <ul id="menu" class="hidden md:flex space-x-6">
+            <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-600">About</a></li>
+            <li><a href="#sermons" class="hover:text-blue-600">Sermons</a></li>
+            <li><a href="#gallery" class="hover:text-blue-600">Images & Videos</a></li>
+            <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Spacer to prevent content from being hidden behind fixed navbar -->
+    <div class="h-16"></div>
+    
+    <!-- Home Section with Logo and Image Slider -->
+    <section id="home" class="relative h-64 md:h-80 bg-blue-600 text-white text-center flex flex-col items-center justify-center">
+        <img src="logo.png" alt="Church Logo" class="h-16 md:h-24 mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold">Welcome to Our Church</h2>
+        <p class="mt-2">Join us in worship and fellowship as we grow in faith together.</p>
+    </section>
+    
+    <div class="slider mt-4">
+        <img src="images/DSC_6674.NEF" alt="Church Event" class="slide w-full h-64 object-cover">
+        <img src="images/DSC_6634.NEF" alt="Worship Service" class="slide w-full h-64 object-cover">
+        <img src="images/DSC_6947.NEF" alt="Community Gathering" class="slide w-full h-64 object-cover">
+    </div>
+    
+    <!-- About Section -->
+    <section id="about" class="p-4 md:p-6 text-center">
+        <h3 class="text-xl md:text-2xl font-semibold">About Us</h3>
+        <p class="text-gray-700 mt-2">We are a community of believers dedicated to spreading love and faith.</p>
+    </section>
+    
+    <!-- Sermons Section -->
+    <section id="sermons" class="p-4 md:p-6 bg-gray-200 text-center">
+        <h3 class="text-xl md:text-2xl font-semibold">Latest Sermons</h3>
+        <p class="text-gray-700 mt-2">Listen to our latest sermons and be inspired by the Word of God.</p>
+    </section>
+    
+    <!-- Gallery Section with Grid Layout -->
+    <section id="gallery" class="p-4 md:p-6 text-center">
+        <h3 class="text-xl md:text-2xl font-semibold">Images & Videos</h3>
+        <p class="text-gray-700 mt-2">Experience moments from our services, events, and community gatherings.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <!-- Images -->
+            <div>
+                <h4 class="text-lg font-semibold mb-2">Images</h4>
+                <img src="image1.jpg" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
+                <img src="image2.jpg" alt="Sunday Service" class="w-full h-48 object-cover rounded-lg mb-2">
+            </div>
+            <!-- Videos -->
+            <div>
+                <h4 class="text-lg font-semibold mb-2">Videos</h4>
+                <video controls class="w-full h-48 rounded-lg mb-2">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+                <video controls class="w-full h-48 rounded-lg mb-2">
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="p-4 md:p-6 bg-gray-200 text-center">
+        <h3 class="text-xl md:text-2xl font-semibold">Contact Us</h3>
+        <p class="text-gray-700 mt-2">Email: contact@church.com | Phone: (+233) 245-456-7890</p>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+        &copy; 2025 COFC. All rights reserved.
+    </footer>
+    
+</body>
+</html>
