@@ -29,11 +29,11 @@
         setInterval(showSlides, 3000);
     </script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-100 text-white">
     
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
-        <img src="logo.png" alt="Church Logo" class="h-10">
+    <nav class="bg-teal-950 shadow-md p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <img src="images/logo/IMG-20250322-WA0052.jpg" alt="Church Logo" class="h-10">
         <button class="md:hidden" onclick="document.getElementById('menu').classList.toggle('hidden')">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -54,26 +54,32 @@
     <div class="h-16"></div>
     
     <!-- Home Section with Logo and Image Slider -->
-    <section id="home" class="relative h-64 md:h-80 bg-blue-600 text-white text-center flex flex-col items-center justify-center">
-        <img src="logo.png" alt="Church Logo" class="h-16 md:h-24 mb-4">
+    <section id="home" class="relative h-64 md:h-80 bg-teal-950 text-white text-center flex flex-col items-center justify-center">
+        <img src="images/logo/IMG-20250322-WA0052.jpg" alt="Church Logo" class="h-16 md:h-24 mb-4">
         <h2 class="text-3xl md:text-4xl font-bold">Welcome to Our Church</h2>
         <p class="mt-2">Join us in worship and fellowship as we grow in faith together.</p>
     </section>
     
     <div class="slider mt-4">
-        <img src="images/DSC_6674.NEF" alt="Church Event" class="slide w-full h-64 object-cover">
-        <img src="images/DSC_6634.NEF" alt="Worship Service" class="slide w-full h-64 object-cover">
-        <img src="images/DSC_6947.NEF" alt="Community Gathering" class="slide w-full h-64 object-cover">
+        <img src="images/DSC_6674.NEF" alt="Church Event" class="slide w-full h-auto object-cover">
+        <img src="images/DSC_6634.NEF" alt="Worship Service" class="slide w-full h-auto object-cover">
+        <img src="images/NII_6630.jpg" alt="Community Gathering" class="slide w-full h-auto object-cover">
+        <img src="images/NII_6593.jpg" alt="Community Gathering" class="slide w-full h-auto object-cover">
     </div>
     
     <!-- About Section -->
-    <section id="about" class="p-4 md:p-6 text-center">
+    <section id="about" class="p-4 md:p-6 text-center text-gray-900">
         <h3 class="text-xl md:text-2xl font-semibold">About Us</h3>
-        <p class="text-gray-700 mt-2">We are a community of believers dedicated to spreading love and faith.</p>
-    </section>
+        <p class="text-gray-700 mt-2">We are a community of believers dedicated to spreading love and faith. <br>
+          Our mission is to bring people closer to God through worship, teaching, and service.
+          We envision a church that is a place of healing, restoration, and transformation for all who seek the Lord.
+          Our core beliefs are in the bible as the inspired word of God ,salvation through Jesus Christ,the power of prayer, and the importance of fellowship among belivers. 
+        </p>
+
+      </section>
     
     <!-- Sermons Section -->
-    <section id="sermons" class="p-4 md:p-6 bg-gray-200 text-center">
+    <section id="sermons" class="p-4 md:p-6 bg-gray-200 text-center text-gray-900">
         <h3 class="text-xl md:text-2xl font-semibold">Latest Sermons</h3>
         <p class="text-gray-700 mt-2">Listen to our latest sermons and be inspired by the Word of God.</p>
     
@@ -189,21 +195,26 @@
     </section>
     
     <!-- Gallery Section with Grid Layout -->
-    <section id="gallery" class="p-4 md:p-6 bg-gray-100 text-center">
+    <section id="gallery" class="p-4 md:p-6 bg-gray-100 text-center text-gray-900">
         <h3 class="text-xl md:text-2xl font-semibold">Images</h3>
         <p class="text-gray-700 mt-2">Experience moments from our services, events, and community gatherings.</p>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4">
+        <div class="grid grid-cols md:grid-cols-8 lg:grid-cols-8 gap-2 mt-4">
             <!-- Images -->
             <div>
                 <h4 class="text-lg font-semibold mb-2">Images</h4>
                 <img src="images/DSC_6634.NEF" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
+                <img src="images/NII_6593.jpg" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
+                <img src="images/NII_6609.jpg" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
+                <img src="images/NII_6626.jpg" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
+                <img src="images/NII_6630.jpg" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
+                <img src="images/NII_6621.jpg" alt="Church Gathering" class="w-full h-48 object-cover rounded-lg mb-2">
                 <img src="images/DSC_6674.NEF" alt="Sunday Service" class="w-full h-48 object-cover rounded-lg mb-2">
             </div>
 
             </section>
 
 
-            <section id="Videos" class="p-4 md:p-6 bg-gray-200 text-center">
+            <section id="Videos" class="p-4 md:p-6 bg-gray-200 text-center text-gray-900">
                 <h3 class="text-xl md:text-2xl font-semibold">Latest Videos</h3>
                 <p class="text-gray-700 mt-2">Watch inspiring messages and church events.</p>
             
